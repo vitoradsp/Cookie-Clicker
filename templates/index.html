@@ -1,0 +1,29 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="{%static 'index.js'%}"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'index.css'%}">
+    <title>Document</title>
+    
+</head>
+<body>
+    <header class="homestuff">
+        <a href="">Home</a>
+        <a href="{%url 'saiporra'%}">Logout</a>
+    </header>
+    <section>
+        <div class="imgext">
+            <div class="imgins">
+                <img onclick="counter_add()" src="https://assets.stickpng.com/images/580b57fbd9996e24bc43c0fc.png" alt="">
+                <h1 id="count">{{info.score}}</h1>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

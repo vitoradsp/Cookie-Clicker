@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            background-image: url(https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg);
+        }
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: aliceblue;
+            margin: 55px auto;
+            display: flex;
+            justify-content: center;
+        }
+        .inputs > form{
+            display: flex;
+            flex-direction: column;
+        }
+        .inputs > form > input{
+            width: 250px;
+            height: 30px;
+            margin-bottom: 30px;
+        }
+        .inputs > form > button{
+            width: 250px;
+            height: 30px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inside">
+            <div class="text" style="margin-bottom: 100px;">
+                <h1>Login</h1>
+            </div>
+            <div class="inputs">
+                <form method="POST">{% csrf_token %}
+                    <input type="text" name="usuario" placeholder="Usuario">
+                    <input type="password" name="senha" placeholder="Senha">
+                    <button type="submit">Entrar</button>
+                </form>
+                <a href="#"><p>Esqueceu sua senha?</p></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
